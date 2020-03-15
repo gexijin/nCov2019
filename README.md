@@ -1,9 +1,15 @@
-# Query information of Wuhan coronavirus infected stats
+# nCov2019: An R package for studying the COVID-19 pandemic
+
+To provide direct access to real-time epidemiological data on this outbreak, we developed an R package, nCov2019. This open-source software aggregates data from four different sources. We retrieve the current numbers of confirmed cases and deaths in geographical locations using API calls to the [Tencent SARS-COV-2 website](https://news.qq.com/zt2020/page/feiyan.htm). This R package offers access to three data sources with detailed daily statistics from December 1, 2019, for 43 countries and more than 500 Chinese cities. Our first source is obtained directly from CNHC, which is official historical statistics for the 34 Chinese provinces and special districts. The second source is from a non-governmental organization [Dingxiangyuan](https://ncov.dxy.cn/ncovh5/view/pneumonia), which has been continuously aggregating official data from provincial and city health agencies and the CNHC. The third source is a  [GitHub repository](https://github.com/canghailan/Wuhan-2019-nCoV), which derives data from the literature for December 1, 2019, to January 10, 2020, after which it relies on the Chinese news aggregator Toutiao API. This GitHub repository includes historical data for Chinese cities as well as 43 countries. All datasets are updated daily. 
+
+To enable users to access these datasets without coding, we also developed a Shiny app available in both [English](http://www.bcloud.org/e/) and [Chinese](http://www.bcloud.org/v/). This app can also be run locally from Rstudio. 
+
 
 + `get_nCov2019()` to query online latest information
 + `load_nCov2019()` to get historical data
 + `summary` and `[` to access data
 + `plot` to present data on map
++ ` dashboard(lang = 'en', remote = TRUE)` to start Shiny dashboard
 
 ## :writing\_hand: Authors
 
@@ -13,7 +19,9 @@ School of Basic Medical Sciences, Southern Medical University
 
 <https://guangchuangyu.github.io>
 
-
+Xijin Ge
+Department of Mathematics and Statistics, South Dakota State University
+<https://www.sdstate.edu/directory/xijin-ge>
 
 If you use `nCov2019` in published research, please cite the following paper:
 
